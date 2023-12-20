@@ -72,3 +72,109 @@ const departments = {
 }
 
 console.log(departments);
+
+/* ------ O P D R A C H T  1 ------ */
+
+/* ------ opdracht 1a ------ */
+console.log("De afdeling Sales heeft " + departments.sales.numberOfEmployees + " medewerkers");
+
+/* ------ opdracht 1b ------ */
+console.log("Marketing is een leuke afdeling om te werken. " + departments.marketing.description);
+
+/* ------ opdracht 1c ------ */
+console.log("De afdeling Customer Service heeft " + departments["customer-service"].numberOfEmployees + " medewerkers");
+
+/* ------ opdracht 1d ------ */
+console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. " + departments.sales.jobs[1].description);
+
+
+/* ------ O P D R A C H T  2 ------ */
+
+/* ------ opdracht 2a ------ */
+const departmentChoice = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
+console.log(departmentChoice);
+
+/* ------ opdracht 2b 2c ------ */
+switch (departmentChoice){
+    case "marketing":
+        console.log(document.getElementById('department-description').textContent = "Je heb gekozen voor: " + departmentChoice + ". " + departments.marketing.description);
+        break;
+    case "sales":
+        console.log(document.getElementById('department-description').textContent = "Je heb gekozen voor: " + departmentChoice + ". " + departments.sales.description);
+        break;
+    case "customer-service":
+        console.log(document.getElementById('department-description').textContent = "Je heb gekozen voor: " + departmentChoice + ". " + departments["customer-service"].description);
+        break;
+    default:
+        console.error(document.getElementById('error-message').textContent = 'Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.');
+}
+
+// /* ------ O P D R A C H T  3 ------ */
+//
+// /* ------ opdracht 3a ------ */
+// const functionChoice = prompt("Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 4 in")
+// console.log(functionChoice);
+//
+// /* ------ opdracht 3b 3c ------ */
+// switch (functionChoice){
+//     case "0":
+//         console.log("Je koos " + functionChoice + ". Een uitdagende rol! " + departments.marketing.jobs[0].description);
+//         break;
+//     case "1":
+//         console.log("Je koos " + functionChoice + ". Een uitdagende rol! " + departments.marketing.jobs[1].description);
+//         break;
+//     case "2":
+//         console.log("Je koos " + functionChoice + ". Een uitdagende rol! " + departments.marketing.jobs[2].description);
+//         break;
+//     case "3":
+//         console.log("Je koos " + functionChoice + ". Een uitdagende rol! " + departments.marketing.jobs[3].description);
+//         break;
+//     case "4":
+//         console.log("Je koos " + functionChoice + ". Een uitdagende rol! " + departments.marketing.jobs[4].description);
+//         break;
+//     default:
+//         console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.")
+// }
+
+/* ------ O P D R A C H T  4 ------ */
+
+/* ------ opdracht 4a ------ */
+console.log(departmentChoice + " is een leuke afdeling om te werken. Er werken op dit moment " + departments[departmentChoice].numberOfEmployees + " medewerkers.");
+
+/* ------ opdracht 4b 4c ------ */
+const functionChoice = prompt("Je koos afdeling "
+    + departmentChoice
+    + ". Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in."
+    + " 0: " + departments[departmentChoice].jobs[0].title
+    + ". 1: " + departments[departmentChoice].jobs[1].title
+    + ". 2: " + departments[departmentChoice].jobs[2].title
+    + ". 3: " + departments[departmentChoice].jobs[3].title);
+
+
+switch (functionChoice){
+    case "0":
+        console.log(document.getElementById('role-description').textContent = departments[departmentChoice].jobs[0].description);
+        break;
+    case "1":
+        console.log(document.getElementById('role-description').textContent = departments[departmentChoice].jobs[1].description);
+        break;
+    case "2":
+        console.log(document.getElementById('role-description').textContent = departments[departmentChoice].jobs[2].description);
+        break;
+    case "3":
+        console.log(document.getElementById('role-description').textContent = departments[departmentChoice].jobs[3].description);
+        break;
+}
+
+/* ------ O P D R A C H T  5  B O N U S ------ */
+
+/* ------ opdracht 5a ------ */
+// document.getElementById('role-title').textContent = "Fan Qiang";
+// document.getElementById('department-description').textContent = "Ye";
+
+/* ------ opdracht 5b ------ */
+
+
+
+
+
